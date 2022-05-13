@@ -1,26 +1,21 @@
 from flask import Flask
+import werkzeug
+werkzeug.cached_property = werkzeug.utils.cached_property
+from flask_restplus import Api, Resource,reqparse
+from flask_cors import CORS
 
-from flask_restful import Resource, Api
+application = Flask(__name__)
+application.wsgi_app = ProxyFix(application.wsgi_app)
 
-app = Flask(__name__)
+API_NAME = Api(application, version="1.0",
+               title="BioInformatics",
+               default="/",
+               default_label="Bioinformatics use cases",
+               description="Swagger Documentation",
+               strict_slashes=False)
+CORS(application)
 
-api = Api(app)
-
-class Helloworld(Resource):
-
-	def __init__(self):
-
-		pass
-
-	def get(self):
-
-		return {
-
-			"Hello": "World"
-
-		}
-
-api.add_resource(Helloworld, '/')
+API_NAME_BI = API_NAME.namespace('BioInformatics', description= 'End points of BioInformatics use cases')
 
 if __name__ == '__main__':
 
