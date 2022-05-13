@@ -13,7 +13,7 @@ API_NAME = Api(application, version="1.0",
                strict_slashes=False)
 CORS(application)
 
-API_NAME_BI = API_NAME.namespace('BioInformatics', description= 'End points of BioInformatics use cases')
+API_NAME_BI = API_NAME.namespace('BioInformatics ', description= 'End points of BioInformatics use cases')
 
 if __name__ == '__main__':
 
