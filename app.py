@@ -1,8 +1,27 @@
-import json
 from flask import Flask
+
+from flask_restful import Resource, Api
+
 app = Flask(__name__)
-@app.route('/')
-def index():
-    return json.dumps({'name': 'alice',
-                       'email': 'alice@outlook.com'})
-app.run(host='0.0.0.0', port=5000)
+
+api = Api(app)
+
+class Helloworld(Resource):
+
+	def __init__(self):
+
+		pass
+
+	def get(self):
+
+		return {
+
+			"Hello": "World"
+
+		}
+
+api.add_resource(Helloworld, '/')
+
+if __name__ == '__main__':
+
+	app.run(debug=True)
