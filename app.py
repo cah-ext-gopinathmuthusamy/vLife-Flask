@@ -17,4 +17,4 @@ API_NAME_BI = API_NAME.namespace('BioInformatics ', description= 'End points of 
 
 if __name__ == '__main__':
 
-	app.run(port=8080 ,host='0.0.0.0')
+	app.run(port=8000 ,host='0.0.0.0')
