@@ -1,11 +1,9 @@
 from flask import Flask
-import werkzeug
-werkzeug.cached_property = werkzeug.utils.cached_property
 from flask_restplus import Api, Resource,reqparse
 from flask_cors import CORS
 
 application = Flask(__name__)
-application.wsgi_app = ProxyFix(application.wsgi_app)
+
 
 API_NAME = Api(application, version="1.0",
                title="BioInformatics",
