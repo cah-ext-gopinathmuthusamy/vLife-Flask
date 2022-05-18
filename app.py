@@ -8,7 +8,6 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'disable the web security'
 app.config['CORS_HEADERS'] = 'Content-Type'
 API_NAME = Api(app,
-               version="1.0",
                title="vLife Demo App",
                default=None,
                default_label=None,
