@@ -29,7 +29,7 @@ class Helloworld(Resource):
 
 		}
 
-API_NAME = API_NAME.namespace('vLifeHealthMonitor', description= "API's for health monitor dashboard")
+API_NAME = API_NAME.namespace('vLife-DemoApp', description= "API's for vLife Demo App - POC")
 	
 API_NAME.add_resource(Helloworld, '/')
 
