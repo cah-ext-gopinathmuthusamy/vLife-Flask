@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'vlife-demo'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4B5423AE45754B128E8D9C16D1B4DBC3 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_39899E4A46A544D191EC31FFB5D4762B }}
